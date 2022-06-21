@@ -15,7 +15,7 @@ Vue.createApp({//un objeto que tiene propiedades
       created(){
 
    
-          axios.get("http://localhost:8080/api/clients/current" )// axios es una libreria basada en promesas
+          axios.get("/api/clients/current" )// axios es una libreria basada en promesas
           .then(datos =>{ //El método then devuelve una promesa que permite encadenar métodos
               this.account = datos.data.accounts//metodo get obtiene
               

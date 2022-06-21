@@ -11,7 +11,7 @@ Vue.createApp({//un objeto que tiene propiedades
   },
 
     created(){
-        axios.get("http://localhost:8080/api/clients/current")// axios es una libreria basada en promesas
+        axios.get("/api/clients/current")// axios es una libreria basada en promesas
         .then(datos =>{ //El método then devuelve una promesa que permite encadenar métodos
             this.client = datos.data
             this.accountsClient = datos.data.accounts.sort((a,b) => a.id - b.id)
@@ -24,7 +24,7 @@ Vue.createApp({//un objeto que tiene propiedades
 
   methods : {
   logout(){
-    axios.post('/api/logout').then(response => window.location.href="http://localhost:8080/web/index.html")
+    axios.post('/api/logout').then(response => window.location.href="/web/index.html")
     
   },
 
@@ -68,7 +68,7 @@ Vue.createApp({//un objeto que tiene propiedades
             })
 
                 .then(result => {
-                    axios.post(`http://localhost:8080/api/clients/current/accounts`, `type=${this.tipoDeCuenta}`)
+                    axios.post(`/api/clients/current/accounts`, `type=${this.tipoDeCuenta}`)
                         .then(response => {
                             location.reload()
                         })

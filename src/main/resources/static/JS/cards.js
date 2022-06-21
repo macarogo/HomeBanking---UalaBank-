@@ -33,7 +33,7 @@ Vue.createApp({//un objeto que tiene propiedades
         this.cards.forEach(card => {
           if(card.truDate.valueOf() < actual.valueOf()){
             console.log(card.truDate + "Card Vencida")
-            axios.patch(`http://localhost:8080/api/cards/expired/${card.id}`)
+            axios.patch(`/api/cards/expired/${card.id}`)
           }
           else{
             console.log(card.truDate + "Card Active")
@@ -42,7 +42,7 @@ Vue.createApp({//un objeto que tiene propiedades
       },
 
       cargardatosiniciales(){
-        axios.get("http://localhost:8080/api/clients/current")
+        axios.get("/api/clients/current")
         .then(datos => {
           this.client = datos.data
           this.cards = datos.data.cards
@@ -58,7 +58,7 @@ Vue.createApp({//un objeto que tiene propiedades
       },
 
       cargardatos(){
-        axios.get("http://localhost:8080/api/clients/current")
+        axios.get("/api/clients/current")
         .then(datos => {
           this.client = datos.data
 
@@ -108,7 +108,7 @@ Vue.createApp({//un objeto que tiene propiedades
       },
 
       logout(){
-        axios.post('/api/logout').then(response => window.location.href="http://localhost:8080/web/index.html")
+        axios.post('/api/logout').then(response => window.location.href="/web/index.html")
       },
 
     },

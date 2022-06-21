@@ -17,7 +17,7 @@ Vue.createApp({//un objeto que tiene propiedades
         const myParam = urlParams.get('id');
 
         console.log(myParam)
-          axios.get("http://localhost:8080/api/accounts/" + myParam)// axios es una libreria basada en promesas
+          axios.get("/api/accounts/" + myParam)// axios es una libreria basada en promesas
           .then(datos =>{ //El método then devuelve una promesa que permite encadenar métodos
               this.account = datos.data//metodo get obtiene
               this.transactions = datos.data.transactions
@@ -27,7 +27,7 @@ Vue.createApp({//un objeto que tiene propiedades
               console.log(this.transactions)                    
           })
 
-          axios.get("http://localhost:8080/api/clients/current")// axios es una libreria basada en promesas
+          axios.get("/api/clients/current")// axios es una libreria basada en promesas
           .then(datos =>{ //El método then devuelve una promesa que permite encadenar métodos
               this.client = datos.data      
               console.log(this.client.firstName)
@@ -39,7 +39,7 @@ Vue.createApp({//un objeto que tiene propiedades
   
     methods : {
       logout(){
-        axios.post('/api/logout').then(response => window.location.href="http://localhost:8080/web/index.html")
+        axios.post('/api/logout').then(response => window.location.href="/web/index.html")
         
       },
 
@@ -47,7 +47,7 @@ Vue.createApp({//un objeto que tiene propiedades
         const urlParams = new URLSearchParams(window.location.search);
         const myParam = urlParams.get('id');
 
-        axios.post(`http://localhost:8080/api/pdf/${myParam}`,`desde=${this.desde}&hasta=${this.hasta}`)
+        axios.post(`/api/pdf/${myParam}`,`desde=${this.desde}&hasta=${this.hasta}`)
         .then(console.log("download"))
         .catch(error => {
           console.log(error);

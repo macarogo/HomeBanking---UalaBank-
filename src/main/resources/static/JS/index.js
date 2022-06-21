@@ -26,7 +26,7 @@ Vue.createApp({//un objeto que tiene propiedades
         {headers:
           {'content-type':'application/x-www-form-urlencoded'}})
           .then((result) => {
-            this.email == "admin@mindhub.com" && this.password == "adminmainhub3" ? window.location.href="http://localhost:8080/manager.html" : window.location.href="http://localhost:8080/web/accounts.html"
+            this.email == "admin@mindhub.com" && this.password == "adminmainhub3" ? window.location.href="/manager.html" : window.location.href="/web/accounts.html"
           })
           .catch(error =>{ 
             this.errorInicio = "The email or password already exist"//error no esta autorizado//envio a que se registre
