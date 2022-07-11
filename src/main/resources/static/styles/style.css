@@ -264,7 +264,6 @@ nav{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-
 #boton{
     position: relative;
     display: inline-block;
@@ -300,10 +299,10 @@ nav{
 }
 
 .imgCompras{
-    width: 28%;
+    width: 26%;
     height: 20vh;
     position: absolute;
-    left: 28rem;
+    left: 29rem;
     top: 12rem;
 }
 
@@ -898,8 +897,8 @@ nav{
 }
 
 .imgCards{
-    width: 27%!important;
-    height: 23vh!important;
+    width: 25%!important;
+    height: 21vh!important;
     left: 45rem!important;
     top: 10.5rem;
 }
@@ -1049,6 +1048,30 @@ thead{
     font-size: 1.125em;
 }
 
-@media screen and (min-width: 668px){
-    
-}
+@media screen and (max-width: 320px){
+    body{
+      padding-top: .5rem;
+      padding-left: .5rem;
+      padding-right: .5rem;
+      padding-bottom: .5rem;
+    }
+    #quote{
+        font-size: .9rem;
+        width: 50%;
+    }
+    .containerPublicidad{
+        width: 85%;
+        height: 41vh;
+    }
+    .h5, h5{
+        font-size: .85rem !important;
+    }
+    .parrafoPromociones{
+        font-size: .7rem;
+    }
+    #boton {
+        margin-top: 0rem;
+        font-size: .8rem;
+        
+    }
+  }
