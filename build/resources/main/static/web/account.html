@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"> 
+</head>
+<body>
+    <div id="app">
+        <div class="container container-fluid flex-wrap">
+            <header>
+                <div class="header d-flex align-items-center flex-wrap">
+                    <a href="#" class="navbar-brand">
+                        <span class="white-head">
+                            <span class="pink-head">
+                                Ual
+                            </span>Banck
+                        </span>
+                    </a>
+                    <!-- Saludo -->
+                    <div>
+                        <h2 id="nombreClient">Hi {{client.firstName}} {{client.lastName}}!</h2>
+                    </div>
+    
+                    <div class="nav-end ms-sm-auto">
+                        <a href="#">
+                            <span class="fas fa-bell tamañoIconHeader"></span>
+                        </a>
+                        <button class="btn">
+                            <img src="../img/298d1e3c3c7d06466f4e9c49aacecda5.jpg"
+                                alt="" id="profile-photo">
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <main id="body" class="d-flex">
+                <nav>
+                    <div class="l_navbar text-center " id="l_navbar" >
+                        <div class="navMenu">
+                            <span class="navLogo d-flex mx-2 mt-2">
+                                <i class="fa-solid fa-bars navLogo-icon ms-2" id="btn_open"></i>  
+                                <h3 class="textLogo ms-2">Queries</h3> 
+                            </span>
+                        </div>
+                        <div class="navList">
+                            <a href="../web/accounts.html" class="a d-flex mx-2">
+                                <i class="fa-solid fa-dollar-sign nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Accounts</h3>
+                            </a>
+                        </div>
+                        <div class="navList">
+                            <a href="../web/cards.html" class="a d-flex mx-2">
+                                <i class="fa-solid fa-credit-card nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Cards</h3>
+                            </a>
+                        </div>                        
+                        <div class="navList">
+                            <a href="../web/loan-application.html" class="a d-flex active  mx-2" >
+                                <i class="fa-solid fa-hand-holding-dollar nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Loans</h3>
+                            </a>
+                        </div>                        
+                        <div class="navList">
+                            <a href="#" class="a d-flex mx-2">
+                                <i class="fa-solid fa-hand-holding-heart nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Insurance </h3></a>
+                        </div>                        
+                        <div class="navList">
+                            <a href="#" class="a d-flex mx-2">
+                                <i class="fa-solid fa-receipt nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Receipts</h3>
+                            </a>
+                        </div>                        
+                        <div class="navList">
+                            <a href="../web/transfers.html" class="a d-flex mx-2">
+                                <i class="fa-solid fa-circle-dollar-to-slot nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Transactions</h3>
+                            </a>
+                        </div>
+                        <div class="lineaNav mx-3">
+                            <p></p>
+                        </div>
+                        <div class="navList">
+                            <a href="#" class="a d-flex mx-2">
+                                <i class="fa-solid fa-envelope nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Inbox</h3>
+                            </a>
+                        </div>
+                        <div class="navList">
+                            <a href="#" class="a d-flex mx-2">
+                                <i class="fa-solid fa-comment-dots nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Comments</h3>
+                            </a>
+                        </div>
+                        <div class="navList">
+                            <a href="#" class="a d-flex mx-2" v-on:click="logout">
+                                <i class="fa-solid fa-arrow-right-to-bracket nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">close</h3>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="containerMain">
+
+                    <!-- Texto de Bienvenida-->
+                    <div>
+                        <h2 id="quote">Welcome to your Online Bancking</br>We reinvent ourselves to give</br>you a better service.</h2>
+                    </div>
+                    
+                    <section class="containerPublicidadPrestacionesLoan">
+                        <div class="containerPublicidadPrestaciones">
+
+                            <!-- Publicidad -->
+                            <div class="containerPublicidad ms-4 mt-3">
+                                <div>
+                                    <h3 class="h5 mt-3 ms-3 tituloLoal">Enjoy all the savings we </h3>
+                                    <h3 class="h5 ms-3">have for you on purchases:</h3>
+                                    <p class="mt-3 ms-3 parrafoPromociones">fashion and accessories, automotive, personal care, children and many more!</p>
+                                    <button class="learMore btn ms-3 " id="boton">learn more..</button>
+                                </div>
+                                <div>
+                                    <img class="imgCompras imgCeluAccount" src="../img/foto_no_exif.jpg" alt="compras">
+                                </div>                                
+                            </div>
+            
+                                <!-- Download de Transactions -->
+                            <form class="containerFlow ms-4 containerFlowAccount" v-on:submit.prevent="download" >
+                                <div class="glas-flow glas-flow-account">
+                                    <div class="ms-3 mt-3"><p class=" gflow-label-colors">Transactions</p></div>                                       
+                                    <div class="gflow-line"></div>
+                                    <div><input type="date" name="logemail" class="gflow-label-colors" placeholder="Desde" id="logdate" autocomplete="off" v-model="desde"></div>
+                                    <div class="gflow-line"></div>
+                                    <div><input type="date" name="logemail" class="gflow-label-colors" placeholder="Hasta" id="logdate" autocomplete="off" v-model="hasta"></div>
+                                    <div class="gflow-line"></div>
+                                    <div ><button class="btn me-3" id="boton">download</button></div>                                       
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Loan -->
+                        <div class="containerLoan">
+                            <div class="cont-Loan cont-Loan-Account">
+                                <div id="iconAccount" class="ms-3 mt-2">
+                                    <i class="fa-solid fa-dollar-sign nav-icon pt-2 " id="colorIconoAccount" ></i>
+                                </div>
+                                <div>
+                                    <h1 class="h3 ms-3 mt-2 tituloLoal">Account</h1>
+                                    <h3 class="h5 ms-3 mt-3">{{account.number}}</h3>                 
+                                    <h2 class="tamañoBalance ms-3 " id="colorBalance">$ {{account.balance}}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- table Transaction -->
+                    <div class="tableTransacions" data-bs-spy="scroll" data-bs-smooth-scroll="true" class="scrollspy-example containerScroolspy" tabindex="0" data-bs-spy="scroll" data-bs-smooth-scroll="true" tabindex="0" >
+                        <table id="containerTabla">
+                            <thead>
+                                <tr>
+                                    <th class="ps-3 pe-5">Type</th>
+                                    <th>Description</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="transaction in transactions">
+                                    <td class="ps-3">{{transaction.type}}</td>
+                                    <td>{{transaction.description}}</td>
+                                    <td>{{transaction.date}}</td>
+                                    <td :class="{'creditSuccess' : transaction.type == 'CREDITO' , 'debitDanger' : transaction.type == 'DEBITO'} "> 
+                                        $ {{transaction.amount}}</td>
+                                    <td>$ {{transaction.balance}}</td>   
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>              
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://kit.fontawesome.com/2544a6d2ae.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>    
+    <script src="../JS/account.js"></script>
+   
+</body>
+</html>

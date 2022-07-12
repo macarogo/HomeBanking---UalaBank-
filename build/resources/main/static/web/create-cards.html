@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create-Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/sytleIndex.css">
+</head>
+<body>
+    <div id="app" class="animate__animated animate__fadeInDownBig ">
+        <div id="container">
+			<div class="section">
+				<div class="container">
+					<div class="row full-height d-flex justify-content-center">
+						<div class="col-12 text-center align-self-center py-5">
+							<div class="section containerLogin pb-5 pt-5 pt-sm-2 text-center">
+								<h6 class="mb-0 pb-3"><span>Card Debit</span><span>Card Credit</span></h6>
+								  <input class="checkbox" type="checkbox" v-model="cardType" id="reg-log" name="reg-log"/>
+								  <label for="reg-log"></label>
+								<div class="card-3d-wrap mx-auto">
+									<div class="card-3d-wrapper">
+										<div class="card-front animate__animated ">
+											<div class="center-wrap">
+												<div class="section text-center">
+													<h4 class="mb-4 pb-3 animate__animated animate__rollIn animate__delay-1s">Enter from here to create</h4>
+													<div class="form-group">
+                                                        <select v-model="cardColor" class="form-style">
+															<option value="" placeholder="Options Cards">Options Cards</option>
+                                                            <option value="GOLD">Gold</option>
+                                                            <option value="TITANIUM">Titanium</option>
+                                                            <option value="SILVER">Silver</option>
+                                                        </select>											
+													</div>	
+													<button class="btn mt-4" id="botonAccount" v-on:click="createCards" type="button">Crear</button>
+													<p class="mb-0 mt-4 text-center"><a href="#0" class="link">{{limiteCardDebit}}</a></p>
+												</div>
+											</div>
+										</div>
+										<div class="card-back animate__animated ">
+											<div class="center-wrap">
+												<div class="section text-center">
+													<form>
+														<h4 class="mb-4 pb-3 animate__animated animate__rollIn animate__delay-1s">Enter from here to create</h4>
+														<div class="form-group">
+															<select name="cards" id="cards" v-model="cardColor" class="form-style">
+																<option value="" placeholder="Options Cards">Options Cards</option>
+																<option value="GOLD">Gold</option>
+																<option value="TITANIUM">Titanium</option>
+																<option value="SILVER">Silver</option>
+															</select>
+														</div>
+														<button class="btn mt-4 " id="botonAccount" v-on:click="createCards" type="button">Crear</button>
+														<p class="mb-0 mt-4 h3 text-center"><a href="#0" class="link">{{limiteCardCredit}}</a></p>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="containerPublicidad">
+				<div>
+					<a href="#" class="navbar animate__animated animate__zoomIn animate__delay-1s">
+                        <span class="white-head">
+                            <span class="pink-head">
+                                Ual
+                            </span>Banck
+                        </span>
+                    </a>
+				</div>
+				<div class="containerPublicidad">
+					<div class="content">
+					  <h3 class="cardBienvenido animate__animated animate__backInRight ">We have one ideal</h3>
+					  <h3 class="cardBienvenido1 animate__animated animate__backInRight "><span class="cardGetnet1">card</span> for you!</h3>
+					  <p class="cardDescripcion animate__animated animate__backInRight animate__delay-1s">Find out which of our cards </p>
+					  <p class="animate__animated animate__backInRight animate__delay-1s">is best suited to you.</p>
+					  <p class="cardDescripcionColor animate__animated animate__backInRight animate__delay-2s">Order now 100% online and </p>
+                      <p class="cardDescripcionColor animate__animated animate__backInRight animate__delay-2s">enjoy it discounted for 6 months.</p>
+					  <button class="btn btnPublicidad animate__animated animate__jackInTheBox animate__delay-3s" type="button">I want my card</button>
+					</div>
+					<img id="animate3D" class="containerApp animate__animated animate__backInUp" src="../img/app5.png" alt="animate3D">
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+    <script src="../JS/create-cards.js"></script>
+</body>
+</html>

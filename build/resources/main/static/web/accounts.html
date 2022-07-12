@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"> 
+    
+</head>
+<body>
+    <div id="app" class="animate__animated animate__fadeInDown ">
+        <div class="container ">
+            <header>
+                <div class="header d-flex align-items-center flex-wrap">
+                    <a href="#" class="navbar-brand">
+                        <span class="white-head">
+                            <span class="pink-head">
+                                Ual
+                            </span>Banck
+                        </span>
+                    </a>
+                    <!-- Saludo -->
+                    <div>
+                        <h2 id="nombreClient">Hi <span>{{client.firstName}} {{client.lastName}}!</span></h2>
+                    </div>
+    
+                    <div class="nav-end ms-sm-auto">
+                        <a href="#">
+                            <span class="fas fa-bell tamañoIconHeader"></span>
+                        </a>
+                        <button class="btn">
+                            <img src="../img/298d1e3c3c7d06466f4e9c49aacecda5.jpg"
+                                alt="" id="profile-photo">
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <main id="body" class="d-flex ">
+                <nav>
+                    <div class="l_navbar text-center " id="l_navbar" >
+                        <div class="navMenu">
+                            <span class="navLogo d-flex mx-2 mt-2">
+                                <i class="fa-solid fa-bars navLogo-icon ms-2" id="btn_open"></i>  
+                                <h3 class="textLogo ms-2">Queries</h3> 
+                            </span>
+                        </div>
+                        <div class="navList">
+                            <a href="#" class="a active d-flex mx-2">
+                                <i class="fa-solid fa-dollar-sign nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Accounts</h3>
+                            </a>
+                        </div>
+                        <div class="navList">
+                            <a href="../web/cards.html" class="a d-flex mx-2">
+                                <i class="fa-solid fa-credit-card nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Cards</h3>
+                            </a>
+                        </div>                        
+                        <div class="navList">
+                            <a href="../web/loan-application.html" class="a d-flex mx-2">
+                                <i class="fa-solid fa-hand-holding-dollar nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Loans</h3>
+                            </a>
+                        </div>                        
+                        <div class="navList">
+                            <a href="#" class="a d-flex mx-2">
+                                <i class="fa-solid fa-hand-holding-heart nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Insurance</h3></a>
+                        </div>                        
+                        <div class="navList">
+                            <a href="#" class="a d-flex mx-2">
+                                <i class="fa-solid fa-receipt nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Receipts</h3>
+                            </a>
+                        </div>                        
+                        <div class="navList">
+                            <a href="../web/transfers.html" class="a d-flex mx-2">
+                                <i class="fa-solid fa-circle-dollar-to-slot nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Transactions</h3>
+                            </a>
+                            <div class="lineaNav mx-3">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="navList">
+                            <a href="#" class="a d-flex mx-2">
+                                <i class="fa-solid fa-envelope nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Inbox</h3>
+                            </a>
+                        </div>
+                        <div class="navList">
+                            <a href="#" class="a d-flex mx-2">
+                                <i class="fa-solid fa-comment-dots nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">Comments</h3>
+                            </a>
+                        </div>
+                        <div class="navList">
+                            <a href="#" class="a d-flex mx-2" v-on:click="logout">
+                                <i class="fa-solid fa-arrow-right-to-bracket nav-icon ms-2"></i>
+                                <h3 class="textNav ms-2">close</h3>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="containerMain">
+
+                    <!-- Texto de Bienvenida-->
+                    <div>
+                        <h2 id="quote">Welcome to your Online Bancking</br>We reinvent ourselves to give</br>you a better service.</h2>
+                    </div>
+                    
+                    <section class="containerPublicidadPrestacionesLoan">
+                        <div class="containerPublicidadPrestaciones">
+                            <!-- Publicidad -->
+                            <div class="containerMainPublicidad">
+                                <div class="containerPublicidad ms-4 mt-3">
+                                    <div>
+                                        <h3 class="h5 mt-3 ms-3 tituloLoal">Enjoy all the savings we </h3>
+                                        <h3 class="h5 ms-3">have for you on purchases:</h3>
+                                        <p class="mt-3 ms-3 parrafoPromociones">fashion and accessories, automotive, personal care, children and many more!</p>
+                                        <button class="learMore btn ms-3 " id="boton">learn more..</button>
+                                    </div>
+                                    <div>
+                                        <img class="imgCompras" src="../img/compras.png" alt="compras">
+                                    </div>
+                                </div>
+                            </div>
+            
+                                <!-- Prestaciones de Servicios -->
+                            <div class="containerFlow ms-4 " >
+                                    <div class="glas-flow">
+                                        <div class="ms-3"><button class=" gflow-label-colors" type="button">Transactions</button></div>
+                                        <div class="gflow-line"></div>
+                                        <div class=""><button class="gflow-label-colors" type="button" >Loans</button></div>
+                                        <div class="gflow-line"></div>
+                                        <div class=""><button class="gflow-label-colors" type="button" >Cards</button></div>
+                                        <div class="gflow-line"></div>
+                                        <div class="gflow-label me-3">Fixed term</div>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Loan -->
+                        <div class="containerLoan">
+                            <div class="cont-Loan">
+                                <div id="iconAccount" class="ms-2 mt-3 ">
+                                    <i class="fa-solid fa-hand-holding-dollar nav-icon pt-2" id="colorIconoAccount"></i>
+                                </div>
+                                <h3 class="mt-3 ms-2 tituloLoal" >Loans</h3>
+                                <div class="containerBody">
+                                    <p>Name</p>
+                                    <p>Payments</p>
+                                    <p>Amount</p>
+                                </div>
+                                <div class="lineaLoan">
+                                    <p></p>
+                                </div>
+                                <div class="mx-2" v-if="loans.length !=0">
+                                    <div class="" id="containerModelLetras" v-for="loan in loans">
+                                        <p class="nameLoan">{{loan.name}}</p>
+                                        <p class="paymentsLoan">{{loan.payments}}</p>
+                                        <p class="colorAmoutLoan">{{loan.amount}}</p>
+                                    </div>
+                                </div>
+                                <span class="ms-3 mt-2" v-else>No Tiene Prestamos</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- accounts -->
+                    <div class="cards">
+                        <div class="accoun" v-for="cuenta in accountsClient">
+                            <div id="iconAccount" class="ms-3 mt-2">
+                                <i class="fa-solid fa-dollar-sign nav-icon pt-2 " id="colorIconoAccount" ></i>
+                            </div>
+                            <div class="account">
+                                <h3 class="h6 ms-3 mt-2">{{cuenta.number}}</h3>
+                                <h1 class="h3 ms-3 mt-2 tituloLoal">Account</h1>
+                                <h2 class="h3 ms-3 mt-2" id="colorBalance">$ {{cuenta.balance}}</h2>
+                                <a :href="'./account.html?id=' + cuenta.id"><button class="btn ms-3 " id="botonAccount">more info</button></a>
+                                <a><button type="submit" class="btn btnRemove" id="botonAccount" @click="removeAccount(cuenta.id)">remove</button></a>
+                            </div>
+                        </div>
+                        <button type="submit" class="buttonCrearAccount" @click="createAccount" v-if="accountsClient.length < 3">Create New Account</button>
+                    </div>
+                
+                </div>
+            </main>
+        </div>
+
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/2544a6d2ae.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/2544a6d2ae.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="../JS/accounts.js"></script>
+   
+</body>
+</html>
