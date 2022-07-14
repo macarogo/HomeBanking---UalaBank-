@@ -40,7 +40,7 @@ body {
     border-radius: 1.5rem;
     min-height: 89vh;
     overflow: hidden;
-    padding: 0; 
+    padding: 0;
 }
 
 .container .header .navbar-brand {
@@ -255,20 +255,20 @@ nav{
     background: rgb(195, 114, 217);
     background: radial-gradient(circle, rgb(195, 114, 217) 20%, rgba(181,85,207,1) 62%);
     width: 97%;
-    height: 25vh; 
+    height: 27vh; 
     border-radius: 1.5rem;
     color: #f3fad4;
     text-shadow: 0.6px 0.6px 1px #25271e;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-left: 1.5rem;
 }
 
 #boton{
     position: relative;
     display: inline-block;
     margin-top: 1rem;
-    margin-bottom: 1rem;
     text-align: center;
     font-size: 1rem;
     text-decoration: none;
@@ -316,8 +316,9 @@ nav{
     width: 97%;
     height: 9.5vh;
     color: rgba(255, 255, 255, 0.544);
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
@@ -446,7 +447,7 @@ nav{
     font-size: 0.9rem;
     color: #f3fad4;
     text-shadow: 1px 1px 2px #1c1d19;
-    width: 40%;
+    width: 37%;
     height: 3.5vh;
     background: linear-gradient(90deg,#95f985,rgba(181,85,207,1),#d1ff3b,#bbf985);
     background-size: 300%;
@@ -914,17 +915,57 @@ nav{
 }
 
 .imgCeluAccount{
-    width: 15%!important;
-    height: 15vh!important;
-    left: 35rem;
-    top: 13.5rem;
+    width: 15%;
+    height: 15vh;
+    top: 12.5rem;
+    left: 33rem;
+    position: absolute;
+}
+.cont-Loan-Account{
+    width: 56.5%;
+    height: 27vh !important;
+    margin-left: 1.4rem !important;
+}
+
+.containerFlowAccount{
+    width: 151.5%;
+}
+
+.glas-flow-account{
+    width: 100%;
+}
+#botonn{
+    position: relative;
+    display: inline-block;
+    margin-top: 0rem;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #95f985;
+    text-shadow: 2px 2px 3px #1c2e19;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #95f985;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 0 0 #95f985;
+}
+
+#botonn:hover {
+    color: #ab71fa;
+    text-shadow: 1px 1px 1px rgb(55, 28, 62);
+    box-shadow: inset 0 -100px 0 0 #95f985;
+    font-size: 1.1rem;
+}
+
+#botonn:active {
+    transform: scale(0.9);
 }
 
 .tableTransacions{
     display: flex;
     flex-wrap: wrap;
     width: 95.5%;
-    height: 15vh;
     margin-left: 1.3rem;  
 }
 
@@ -935,7 +976,7 @@ nav{
     backdrop-filter: blur(4.7px);
     -webkit-backdrop-filter: blur(4.7px);
     width: 120%;
-    height: 25.7vh;
+    height: 26.5vh;
     color: #f3fad4;
     font-size: 1rem;
     text-shadow: .6px .6px 1px #393b32;
@@ -961,20 +1002,6 @@ thead{
     font-size: 1.1rem;
     color: #fd4747;
     text-shadow: .8px .8px 2px #280c0c;
-}
-
-.cont-Loan-Account{
-    width: 56.5% !important;
-    height: 25.1vh;
-    margin-left: 1rem !important;
-}
-
-.containerFlowAccount{
-    width: 151.5% !important;
-}
-
-.glas-flow-account{
-    width: 100% !important;
 }
 
 /* SwatAlert */
@@ -1046,9 +1073,10 @@ thead{
     background: 0 0;
     color: inherit;
     font-size: 1.125em;
+    color: black !important;
 }
 
-@media screen and (max-width: 320px){
+/* @media screen and (max-width: 320px){
     body{
       padding-top: .5rem;
       padding-left: .5rem;
@@ -1074,4 +1102,132 @@ thead{
         font-size: .8rem;
         
     }
-  }
+} */
+
+@media screen and (max-width: 1280px){
+
+    #quote{
+        font-size: 1.1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    #boton {
+        margin-top: 0rem !important;
+        font-size: .8rem !important;
+    }
+    .imgCompras{
+        top: 11rem;
+        left: 28rem;
+    }
+    .containerFlow{
+        margin-top: 1.2rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+
+    .accoun{
+        height: 26.6vh;
+    }
+    .cont-Loan{
+        margin-top: 0rem;
+        height: 39.5vh;
+    }
+    .cards{
+        width: 150% ;
+    }
+    #botonAccount {
+        height: 4.5vh;
+        margin-top: 0rem;
+    }
+    #iconAccount{
+        margin-top: .8rem;
+        margin-left: .6rem;
+    }
+    .containerPublicidadPrestaciones{
+        width: 52.5%;
+    }
+
+    /* Pagina Account */
+    .containerFlowAccount{
+        width: 155% !important;
+    }
+    #containerTabla{
+        height: 26.5vh !important;
+    }
+    .containerFlowAccount{
+        width: 151.5%;
+    }
+    .imgCeluAccount{
+        top: 12.5rem !important;
+    }
+
+}
+
+@media screen and (max-width: 1380px){
+    #quote{
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+    .containerFlow{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .cont-Loan{
+        margin-top: 0rem;
+        height: 39.5vh;
+    }
+    #iconAccount{
+        margin-top: .8rem;
+        margin-left: .6rem;
+    }
+    #containerTabla{
+        height: 25vh;
+    }
+
+    /* Pagina Account */
+    .containerFlowAccount{
+        width: 155%;
+    }
+    .imgCeluAccount{
+        top: 14.5rem;
+    }
+
+}
+
+@media screen and (max-width: 1980px){
+    #quote{
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+    .h5, h5{
+        font-size: 1.1rem !important;
+    }
+    .parrafoPromociones{
+        font-size: 1rem !important;
+    }
+
+    .containerFlow{
+        margin-top: 1.9rem;
+        margin-bottom: 1.9rem;
+    }
+    .cont-Loan{
+        margin-top: 0rem;
+        height: 39.5vh;
+    }
+    #iconAccount{
+        margin-top: .8rem;
+        margin-left: .6rem;
+    }
+
+    .containerPublicidadPrestaciones{
+        width: 52.5%;
+    }
+    
+    /* Pagina Account */
+    .containerFlowAccount{
+        width: 155%;
+    }
+    .imgCeluAccount{
+        top: 14.5rem;
+    }
+
+}

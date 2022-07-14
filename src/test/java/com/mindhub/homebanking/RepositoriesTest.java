@@ -59,8 +59,6 @@ public class RepositoriesTest {
 
     }
 
-
-
     @Test
 
     public void existAccount(){
@@ -79,8 +77,6 @@ public class RepositoriesTest {
         assertThat(accounts,hasItem(hasProperty("number", is("VIN-001"))));
 
     }
-
-
 
     @Test
 
@@ -121,7 +117,6 @@ public class RepositoriesTest {
         assertThat(transactions, hasItem(hasProperty("description", is("Pago por Electricidad"))));
 
     }
-
 
 
     @Test

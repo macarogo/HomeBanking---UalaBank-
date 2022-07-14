@@ -1,5 +1,5 @@
-Vue.createApp({//un objeto que tiene propiedades
-  data() {//data un objeto que retorna mas propiedades 
+Vue.createApp({
+  data() {
     return {
 
       client: {},
@@ -11,8 +11,8 @@ Vue.createApp({//un objeto que tiene propiedades
   },
 
     created(){
-        axios.get("/api/clients/current")// axios es una libreria basada en promesas
-        .then(datos =>{ //El método then devuelve una promesa que permite encadenar métodos
+        axios.get("/api/clients/current")                                                                    
+        .then(datos =>{ 
             this.client = datos.data
             this.accountsClient = datos.data.accounts.sort((a,b) => a.id - b.id)
             this.loans = datos.data.loans
@@ -84,8 +84,6 @@ Vue.createApp({//un objeto que tiene propiedades
     
   },
 
-  
-
   removeAccount(id) {
 
     Swal.fire({
@@ -126,5 +124,5 @@ Vue.createApp({//un objeto que tiene propiedades
 
 computed:{},
 
-}).mount('#app')//enlasamos nuestro objeto vue con el id,queda entrelasado nuestro html con el objeto vue
+}).mount('#app')
 

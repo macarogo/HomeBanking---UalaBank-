@@ -68,7 +68,7 @@ public class ClientController {
         }
 
         if (password.length() >=6){
-            return new ResponseEntity<>("Long password, up to 6 characters", HttpStatus.FORBIDDEN);
+            return new ResponseEntity<>("up to six characters", HttpStatus.FORBIDDEN);
         }
 
 

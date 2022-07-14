@@ -708,18 +708,22 @@ option{
   }
 
   #container {
-    width: 18rem;
+    width: 96%;
   }
 
   .containerLogin{
-    width: 60%;
+    width: 61% !important;
     left: 1rem;
     padding-top: .1rem !important;
   }
 
   #botonAccount {
-    left: 6.5rem;
+    left: 6rem !important;
   }
+  .botonIndex{
+    font-size: .72rem;
+    margin-right: 6rem ;
+   }
   
   .py-5 {
     padding-bottom: .1rem!important;
@@ -752,10 +756,71 @@ option{
     margin-top: 1rem;
   } 
   .containerApp{
-    top: 73rem;
-    left: 5.8rem;
-    width: 9rem;
-    height: 15rem;
+    top: 73rem !important;
+    left: 6rem !important;
+    width: 9rem !important;
+    height: 15rem !important;
+  }
+
+}
+
+@media screen and (max-width: 380px){
+  body{
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    align-items: none;
+  }
+
+  #container {
+    width: 96%;
+  }
+
+  .containerLogin{
+    width: 71.5%;
+  }
+
+  #botonAccount {
+    left: 7rem;
+  }
+  .botonIndex{
+   width: 40% !important;
+   left: 6rem !important;
+  }
+  .py-5 {
+    padding-bottom: .1rem!important;
+  }
+
+  .containerPublicidad{
+    width: 84%;
+    height: 100vh;
+    margin-left: .5rem;
+  }
+  .navbar{
+    font-size: 2rem;
+    width: 113%;
+  }
+
+  .content{
+    margin-top: .1rem;
+    width: 140%;
+    height: 41.5vh;
+  }
+
+  .cardBienvenido{
+    margin-top: .1rem;
+    font-size: 1.2rem;
+  }
+
+  .btnPublicidadIndex{
+    margin-left: 4.8rem;
+    margin-top: 1rem;
+  } 
+  .containerApp{
+    top: 70rem;
+    left: 7.7rem;
+    width: 8rem;
+    height: 13rem;
   }
 
 }

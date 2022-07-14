@@ -1,8 +1,8 @@
-Vue.createApp({//un objeto que tiene propiedades
-    data() {//data un objeto que retorna mas propiedades 
+Vue.createApp({
+    data() {
       return {
        client:{},
-        cards: [],//declaramos las variables
+        cards: [],
         cardCredit:{},
         cardDebit:{},
   

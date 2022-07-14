@@ -1,5 +1,5 @@
-Vue.createApp({//un objeto que tiene propiedades
-    data() {//data un objeto que retorna mas propiedades 
+Vue.createApp({
+    data() {
       return { 
         account: [],
         transactions: [],
@@ -17,9 +17,9 @@ Vue.createApp({//un objeto que tiene propiedades
         const myParam = urlParams.get('id');
 
         console.log(myParam)
-          axios.get("/api/accounts/" + myParam)// axios es una libreria basada en promesas
-          .then(datos =>{ //El método then devuelve una promesa que permite encadenar métodos
-              this.account = datos.data//metodo get obtiene
+          axios.get("/api/accounts/" + myParam)
+          .then(datos =>{
+              this.account = datos.data
               this.transactions = datos.data.transactions
               this.transactions = this.transactions.sort((a,b) => a.id - b.id)
         
@@ -27,8 +27,8 @@ Vue.createApp({//un objeto que tiene propiedades
               console.log(this.transactions)                    
           })
 
-          axios.get("/api/clients/current")// axios es una libreria basada en promesas
-          .then(datos =>{ //El método then devuelve una promesa que permite encadenar métodos
+          axios.get("/api/clients/current")
+          .then(datos =>{ 
               this.client = datos.data      
               console.log(this.client.firstName)
             

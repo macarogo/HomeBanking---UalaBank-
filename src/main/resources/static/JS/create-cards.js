@@ -1,5 +1,5 @@
-Vue.createApp({//un objeto que tiene propiedades
-    data() {//data un objeto que retorna mas propiedades 
+Vue.createApp({
+    data() {
       return {
        client:{},
        cards: {},
@@ -12,9 +12,9 @@ Vue.createApp({//un objeto que tiene propiedades
     },
   
       created(){
-          axios.get("/api/clients/current")// axios es una libreria basada en promesas
-          .then(datos =>{ //El método then devuelve una promesa que permite encadenar métodos
-              this.client = datos.data//metodo get obtiene
+          axios.get("/api/clients/current")
+          .then(datos =>{
+              this.client = datos.data
               this.cards = datos.data.cards
               this.cardDebit = this.cards.filter(card => card.type == "DEBITO")
               this.cardCredit = this.cards.filter(card => card.type == "CREDITO")

@@ -1,5 +1,5 @@
-Vue.createApp({//un objeto que tiene propiedades
-    data() {//data un objeto que retorna mas propiedades 
+Vue.createApp({
+    data() {
       return {
   
         email:"",
@@ -34,26 +34,75 @@ Vue.createApp({//un objeto que tiene propiedades
           
       },
 
+      // register(){
+      //   axios.post('/api/clients',`firstName=${this.firstName}&lastName=${this.lastName}&email=${this.emailRegister}&password=${this.passwordRegister}`,
+      //   {headers:{'content-type': 'application/x-www-form-urlencoded'}})
+      //   .then(response => {
+      //     this.email=this.emailRegister,
+      //     this.password=this.passwordRegister,
+      //     this.iniciarSeccion()
+      //   })
+      //   .catch(error =>{
+      //     if(error.response.data == "Name already in use"){
+      //       this.errorRegister="Registered email"
+      //     } 
+      //   });
+      // },
+      
       register(){
-        axios.post('/api/clients',`firstName=${this.firstName}&lastName=${this.lastName}&email=${this.emailRegister}&password=${this.passwordRegister}`,
-        {headers:{'content-type': 'application/x-www-form-urlencoded'}})
-        .then(response => {
-          this.email=this.emailRegister,
-          this.password=this.passwordRegister,
-          this.iniciarSeccion()
+        
+        Swal.fire({
+          title: "Are you sure?",
+          text: "to register?",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: '#014377',
+          cancelButtonColor: '#ff0000',
+          confirmButtonText: 'register'
         })
-        .catch(error =>{
-          if(error.response.data == "Name already in use"){
-            this.errorRegister="Registered email"
-          } 
+
+        .then((result) => {
+          if (result.isConfirmed ) {
+            
+            axios.post('/api/clients',`firstName=${this.firstName}&lastName=${this.lastName}&email=${this.emailRegister}&password=${this.passwordRegister}`,
+              {headers:
+                {'content-type':'application/x-www-form-urlencoded'}}).then(response => console.log("hola"))
+
+                .then (() => {
+                  Swal.fire({ 
+                    title:'Exitos!',
+                    text:"you registered!",
+                    icon: "success",
+                    timer:2000
+                    
+                }).then(response => {
+                  this.email=this.emailRegister,
+                  this.password=this.passwordRegister,
+                  this.iniciarSeccion()
+                })
+
+              })
+
+            .catch((error) => {
+              Swal.fire({
+              icon: 'error',
+              text: error.response.data,
+                
+            })}) 
+
+
+          };
+
         });
-      }
+          
+      },
       
   },
   
     computed:{},
   
   }).mount('#app')
+
 
   
 
