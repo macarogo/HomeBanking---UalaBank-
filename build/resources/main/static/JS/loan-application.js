@@ -1,4 +1,4 @@
-Vue.createApp({s
+Vue.createApp({
     data() { 
       return {
   
@@ -16,7 +16,7 @@ Vue.createApp({s
     },
   
       created(){
-          axios.get("/api/clients/current")s
+          axios.get("/api/clients/current")
           .then(datos =>{ 
               this.client = datos.data
               this.accountsClient = datos.data.accounts.sort((a,b) => a.id - b.id)

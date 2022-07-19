@@ -492,8 +492,10 @@ option{
 }
 
 #animate3D{
-  width: 12rem;
-  height: 20rem;
+  width: 8rem;
+  height: 13rem;
+  left: 7rem;
+  top: 69rem;
 }
 
 .cardGetnet1{
@@ -510,7 +512,6 @@ option{
 
 
 /*---Pagina Transactions--- */
-
 #animate3DTransaction{
   width: 12rem;
   height: 24rem;
@@ -532,7 +533,22 @@ option{
   font-size: 1.2rem;
 }
 
-/*---Pagina Loas--- */
+/*---Pagina Loans--- */
+#containerLoans{
+  width: 95%;
+  min-height: 50vh;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 .containerPublicidadLoans{
   width: 50%;
   height: 70vh;
@@ -608,11 +624,11 @@ option{
 }
 
 .radio-personal{
-  margin-right: 4rem;
+  margin-right: 3.5rem;
 }
 
 .radio-hipotecario{
-  margin-right: 5rem;
+  margin-right: 5.2rem;
 }
 
 .textRadio{
@@ -621,7 +637,9 @@ option{
 }
 
 .textRadio:hover{
-  font-size: 1.1rem;
+  font-size: 1.13rem;
+  font-weight: 900;
+  color: rgba(181,85,207,1);
   text-shadow: 1px 1px 2px #191b14;
 }
 
@@ -631,15 +649,13 @@ option{
 
 /* --Tipo de Loans-- */
 .containerPublicidadPersonal{
-  width: 90%;
+  width: 50%;
   height: 46vh;
   display: flex;
   flex-direction: column;
-  /* background: rgba(255, 255, 255, 0.2); */
   border-radius: 1rem;
   margin-left: 4rem;
 }
-
 
 .containerImagen{
   background-image: url(../img/mujer.jpg);
@@ -698,7 +714,6 @@ option{
 }
 
 /* SwatAlert */
-
 .swal2-popup {
   border-radius: 1.5rem !important;
   background: rgba(181,85,207,1) !important;
@@ -768,7 +783,6 @@ option{
   font-size: 1.125em;
   color: black !important;
 }
-
 
 
 @media screen and (max-width: 320px){
@@ -897,7 +911,7 @@ option{
 
 }
 
-@media (min-width: 720px) {
+@media (min-width: 720px){
   body{
     padding-left: 2rem;
     padding-top: 2rem;
@@ -940,7 +954,7 @@ option{
 }
 
 
-@media (min-width: 1280px) {
+@media (min-width: 1280px){
   body{
     padding-left: 3.5rem;
     display: flex;
@@ -951,23 +965,88 @@ option{
     display: flex;
     justify-content: space-evenly;
   }
+  
   .containerLogin{
     width: 100%;
     /* margin-left: 1rem; */
   }
   .containerPublicidad{
     width: 50%;
-    margin-top: 2.1rem;
+    margin-top: 0rem;
     margin-right: .8rem;
   }
-  .navbar{
-    font-size: 1.8rem;
+  .cardBienvenido{
+    margin-top: 5rem;
   }
   .containerApp{
     top: 15rem;
     left: 57rem;
   }
+  #animate3D{
+    width: 12rem;
+    height: 20rem;
+    left: 53rem;
+    top: 15rem;
+  }
+  .containerPublicidadPersonal{
+    width: 50%;
+    height: 46vh;
+    margin: 1rem;
+  }
+  /* Pagina loans */
+  .containerPublicidadPersonal{
+    width: 90%;
+    height: 56.5vh;
+  }
   
+  .containerImagen{
+    width: 100%;
+    height: 100vh;
+  }
+  .containerPublicidadHipotecario{
+    width: 115%;
+    height: 46.5vh;
+  }
+  .containerPublicidadAutomotriz{
+    width: 100%;
+    height: 46.5vh;
+  }
+
+  .containerDinero{
+    width: 17%;
+    height: 3.2vh;
+    margin-top: 3.7rem;
+    margin-left: 5.5rem;
+  }
+  /* Pagina Transactions*/
+  .transactionBienvenida{
+    margin-top: 6rem !important;
+  }
+  #animate3DTransaction{
+    left: 60rem !important;
+  }
+  
+}
+
+@media (min-width: 1300px) {
+  /* Pagina Loans */
+  .containerDinero{
+    margin-top: 3.5rem;
+  }
+  #containerLoans{
+    min-height: 50vh;
+  }
+  .containerImagen{
+    height: 46vh;
+  }
+  .containerLogoLoan{
+    height: 10vh;
+  }
+  /* Pagina Transactions*/
+  .transactionBienvenida{
+    margin-top: 4.5rem !important;
+  }
+
 }
 
 @media (min-width: 1380px) {
@@ -987,7 +1066,11 @@ option{
   .navbar{
     font-size: 2rem;
   }
+  #animate3D{
+    left: 53rem;
+  }
 }
+
 
 @media (min-width: 1580px) {
   body{
@@ -1002,5 +1085,26 @@ option{
   left: 71rem;
     width: 14rem;
     height: 23rem;
+  }
+  #animate3D{
+    left: 65rem;
+  }
+  .containerDinero{
+    margin-top: 7rem;
+    margin-left: 6.2rem;
+  }
+  /* Pagina Loans */
+  .containerDinero{
+     margin-top: 4.8rem;
+  }
+  /* Pagina Transactions*/
+  .transactionBienvenida{
+    margin-top: 4rem !important;
+  }
+  #animate3DTransaction{
+    left: 75rem !important;
+  }
+  .cardBienvenido{
+    margin-top: 3rem;
   }
 }

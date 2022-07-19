@@ -593,6 +593,7 @@ nav{
     perspective:600px;
     background: none !important;
     border: none !important;
+    margin-top: 2.3rem;
 }
 
 .card__partFront{
@@ -900,7 +901,7 @@ nav{
 .imgCards{
     width: 25%!important;
     height: 21vh!important;
-    left: 45rem!important;
+    left: 45rem;
     top: 10.5rem;
 }
 
@@ -1159,6 +1160,9 @@ thead{
     .imgCeluAccount{
         top: 12.5rem !important;
     }
+    .imgCards{
+        top: 11rem !important;
+    }
 
 }
 
@@ -1189,6 +1193,11 @@ thead{
     }
     .imgCeluAccount{
         top: 14.5rem;
+    }
+    /* Pagina Cards */
+    .imgCards{
+        top: 12.5rem;
+        left: 45rem !important;
     }
 
 }
@@ -1229,5 +1238,10 @@ thead{
     .imgCeluAccount{
         top: 14.5rem;
     }
+        /* Pagina Cards */
+        .imgCards{
+            top: 12.5rem;
+            left: 55rem;
+        }
 
 }
