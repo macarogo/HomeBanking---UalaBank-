@@ -12,9 +12,6 @@ repositories {
 	mavenCentral()
 }
 
-//
-//La aplicacion tenga cambio en momento real cuando inicie el programa
-//Gradle compila, empaqueta y ejecuta el programa
 bootRun {
 	sourceResources sourceSets.main
 }
@@ -27,7 +24,6 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml'
-
 	implementation group: 'com.lowagie', name: 'itext', version: '2.1.7'
 }
 
