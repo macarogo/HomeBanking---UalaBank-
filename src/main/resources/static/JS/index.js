@@ -12,8 +12,7 @@ Vue.createApp({
     }    
   },
 
-    created(){
-    },
+    created(){},
 
   methods : {
     iniciarSeccion(){
