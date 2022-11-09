@@ -7,12 +7,10 @@ import java.time.LocalDate;
 
 @Entity
 public class Card {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
     private long id;
-
     private String cardHolder;
     private CardType type;
     private CardColor color;
@@ -20,19 +18,12 @@ public class Card {
     private int cvv;
     private LocalDate truDate;
     private LocalDate fromDare;
-
     private boolean active;
     private boolean expired;
-
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="client_id")
     private Client client;
-
-    //@OneToOne(fetch = FetchType.EAGER)
-    //@JoinColumn(name="card_")
-    //private CreditCardLimited creditCardLimited;
-
 
     public Card() {}
 
@@ -53,93 +44,63 @@ public class Card {
     public long getId() {
         return id;
     }
-
-
     public String getCardHolder() {
         return cardHolder;
     }
-
     public void setCardHolder(String cardHolder) {
         this.cardHolder = cardHolder;
     }
-
-
     public CardType getType() {
         return type;
     }
-
     public void setType(CardType type) {
         this.type = type;
     }
-
-
     public CardColor getColor() {
         return color;
     }
-
     public void setColor(CardColor color) {
         this.color = color;
     }
-
-
     public String getNumber() {
         return number;
     }
-
     public void setNumber(String number) {
         this.number = number;
     }
-
-
     public int getCvv() {
         return cvv;
     }
-
     public void setCvv(int cvv) {
         this.cvv = cvv;
     }
-
-
     public LocalDate getTruDate() {
         return truDate;
     }
-
     public void setTruDate(LocalDate truDate) {
         this.truDate = truDate;
     }
-
-
     public LocalDate getFromDare() {
         return fromDare;
     }
-
     public void setFromDare(LocalDate fromDare) {
         this.fromDare = fromDare;
     }
-
-
     public Client getClient() {
         return client;
     }
-
     public void setClient(Client client) {
         this.client = client;
     }
-
-
     public boolean isActive() {
         return active;
     }
-
     public void setActive(boolean active) {
         this.active = active;
     }
-
-
     public boolean isExpired() {
         return expired;
     }
-
     public void setExpired(boolean expired) {
         this.expired = expired;
     }

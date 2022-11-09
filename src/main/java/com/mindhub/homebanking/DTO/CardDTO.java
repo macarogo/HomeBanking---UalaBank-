@@ -16,23 +16,16 @@ public class CardDTO {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
     private long id;
-
     private String cardHolder;
     private CardType type;
     private CardColor color;
     private String number;
     private int cvv;
     private LocalDate fromDare;
-
-
     private LocalDate truDate;
     private boolean expired;
 
-
-    public CardDTO() {
-
-    }
-
+    public CardDTO() {}
 
     public CardDTO(Card card) {
 
@@ -47,39 +40,30 @@ public class CardDTO {
         this.expired = card.isExpired();
     }
 
-
     public long getId() {
         return id;
     }
-
     public String getCardHolder() {
         return cardHolder;
     }
-
     public CardType getType() {
         return type;
     }
-
     public CardColor getColor() {
         return color;
     }
-
     public String getNumber() {
         return number;
     }
-
     public int getCvv() {
         return cvv;
     }
-
     public LocalDate getFromDare() {
         return fromDare;
     }
-
     public LocalDate getTruDate() {
         return truDate;
     }
-
     public boolean isExpired() {
         return expired;
     }

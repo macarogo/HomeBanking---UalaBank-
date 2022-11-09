@@ -12,16 +12,12 @@ import java.util.stream.Collectors;
 
 @Entity
 public class Loan {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
     private long id;
-
     private String name;
-
     private long maxAmount;
-
 
     @ElementCollection
     @Column(name="payments")
@@ -32,12 +28,7 @@ public class Loan {
 
     private int interest;
 
-
-
-    public Loan(){
-
-    }
-
+    public Loan(){}
 
     public Loan(String name, long maxAmount, int interest,List<Integer> payments) {
         this.name = name;
@@ -46,68 +37,22 @@ public class Loan {
         this.interest = interest;
     }
 
+    public long getId() {return id;}
 
+    public String getName() {return name;}
 
-    public long getId() {
+    public void setName(String name) {this.name = name;}
 
-        return id;
-    }
-
-
-    public String getName() {
-
-        return name;
-    }
-
-    public void setName(String name) {
-
-        this.name = name;
-    }
-
-
-    public long getMaxAmount() {
-
-        return maxAmount;
-    }
-
-    public void setMaxAmount(long maxAmount) {
-
-        this.maxAmount = maxAmount;
-    }
-
-
-    public List<Integer> getPayments() {
-
-        return payments;
-    }
-
-    public void setPayments(List<Integer> payments) {
-
-        this.payments = payments;
-    }
-
-
-    public Set<ClientLoan> getClientLoans() {
-
-        return clientLoans;
-    }
-
-
-    public void addClientLoan(ClientLoan clientLoan) {
-        clientLoan.setLoan(this);
-        clientLoans.add(clientLoan);
-    }
-
-
-    public  List<Client> getClient(){
-        return clientLoans.stream().map(clientLoan -> clientLoan.getClient()).collect(Collectors.toList());
-    }
-
-
+    public long getMaxAmount() {return maxAmount;}
+    public void setMaxAmount(long maxAmount) {this.maxAmount = maxAmount;}
+    public List<Integer> getPayments() {return payments;}
+    public void setPayments(List<Integer> payments) {this.payments = payments;}
+    public Set<ClientLoan> getClientLoans() {return clientLoans;}
+    public void addClientLoan(ClientLoan clientLoan) {clientLoan.setLoan(this);clientLoans.add(clientLoan);}
+    public  List<Client> getClient(){return clientLoans.stream().map(clientLoan -> clientLoan.getClient()).collect(Collectors.toList());}
     public int getInterest() {
         return interest;
     }
-
     public void setInterest(int interest) {
         this.interest = interest;
     }
