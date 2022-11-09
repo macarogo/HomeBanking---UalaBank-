@@ -41,7 +41,7 @@ Vue.createApp({
             .then(response => console.log("hola"))
               .then (() => {
                 Swal.fire({ 
-                  title:'Exitos!',
+                  title:'Successes!',
                   text:"you registered!",
                   icon: "success",
                   timer:2000                   

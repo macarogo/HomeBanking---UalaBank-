@@ -24,17 +24,17 @@ Vue.createApp({
 
   createAccount(){
     Swal.fire({
-      title: "Nueva Cuenta",
-      text: "Seleccione el tipo de Cuenta a crear",
+      title: "New account",
+      text: "Select the type of Account to create",
       icon: 'question',
       input: 'select',
       inputOptions: {
-        AHORRO: 'Cuenta de Ahorro',
-        CORRIENTE: 'Cuenta Corriente',
+        AHORRO: 'Savings account',
+        CORRIENTE: 'Current account',
       },
-      inputPlaceHolder: 'Seleccion..',
+      inputPlaceHolder: 'Selection..',
       showCancelButton: true,
-      confirmButtonText: 'Crear',
+      confirmButtonText: 'To create',
     inputValidator: (value) => {
       return new Promise((resolve) => {
         if (value === 'AHORRO') {
@@ -54,7 +54,7 @@ Vue.createApp({
     .then(result => {
       if (result.isConfirmed) {
         Swal.fire({
-          title: "Cuenta creada exitosamente!",
+          title: "Account created successfully!",
           icon: 'success'
         })
         .then(result => {
@@ -75,8 +75,8 @@ Vue.createApp({
 
   removeAccount(id) {
     Swal.fire({
-      title: "Estas seguro de querer eliminar esta cuenta?",
-      text: "La accion no podra ser revertida",
+      title: "Are you sure you want to delete this account?",
+      text: "The action cannot be reversed",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#014377',
@@ -89,8 +89,8 @@ Vue.createApp({
           .then(() => {
             Swal.fire({
               icon: 'success',
-              title: 'Exito!',
-              text: 'La cuenta ha sido eliminada',
+              title: 'Successes!',
+              text: 'The account has been deleted',
               timer: 2000
             })
             .then(() => location.reload())
@@ -109,4 +109,3 @@ Vue.createApp({
 computed:{},
 
 }).mount('#app')
-

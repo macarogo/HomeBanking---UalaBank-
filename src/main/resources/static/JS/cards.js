@@ -63,8 +63,8 @@ Vue.createApp({
 
     removeCard(id) {
       Swal.fire({
-        title: "Estas seguro de querer eliminar esta tarjeta?",
-        text: "La accion no podra ser revertida",
+        title: "Are you sure you want to delete this card?",
+        text: "The action cannot be reversed",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#014377',
@@ -77,8 +77,8 @@ Vue.createApp({
           .then(() => {
             Swal.fire({
               icon: 'success',
-              title: 'Exito!',
-              text: 'La Tarjeta ha sido eliminada',
+              title: 'Successes!',
+              text: 'The Card has been deleted',
               timer: 2000
             })
             .then(() => location.reload())

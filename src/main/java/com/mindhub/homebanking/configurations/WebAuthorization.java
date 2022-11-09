@@ -42,8 +42,6 @@ import javax.servlet.http.HttpSession;
           .antMatchers("/web/index.html","/styles/**","/JS/index.js", "/img/**").permitAll()
           .antMatchers("/**").hasAuthority("CLIENT");
 
-
-
   http.formLogin()
 
           .usernameParameter("email")
@@ -56,8 +54,6 @@ import javax.servlet.http.HttpSession;
   http.logout().logoutUrl("/api/logout");
 
   http.csrf().disable();
-
-
 
   //disabling frameOptions so h2-console can be accessed
 
@@ -91,6 +87,4 @@ import javax.servlet.http.HttpSession;
 
   }
  }
-
-
 }

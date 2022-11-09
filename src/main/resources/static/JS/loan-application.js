@@ -48,7 +48,7 @@ Vue.createApp({
           axios.post('/api/loans', aux)
           .then (() => {
             Swal.fire({ 
-              title:'Exitos!',
+              title:'Successes!',
               text:"Your transaction was created successfully!",
               icon: "success",
               timer:2000                   

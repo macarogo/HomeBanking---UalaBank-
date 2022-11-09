@@ -34,7 +34,7 @@ Vue.createApp({
               .then(response => console.log("hola"))
                 .then (() => {
                   Swal.fire({ 
-                    title:'Exitos!',
+                    title:'Successes!',
                     text:"Your transaction was created successfully!",
                     icon: "success",
                     timer:2000                   
