@@ -8,14 +8,9 @@ import com.mindhub.homebanking.models.Loan;
 import java.util.List;
 
 public interface LoanService {
-
     List<ClientLoanDTO> getAllClientLoans();
-
     List<LoanDto> getAllLoans();
-
     Loan getLoan(Long id);
-
     void saveClientLoan(ClientLoan clientLoan);
-
     void saveLoan(Loan loan);
 }
