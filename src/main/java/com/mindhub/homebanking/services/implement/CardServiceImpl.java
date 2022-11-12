@@ -10,10 +10,8 @@ import static utils.CardUtils.getRandomNumber;
 
 @Service
 public class CardServiceImpl implements CardService {
-
     @Autowired
     CardRepository cardRepository;
-
 
     @Override
     public void saveCard(Card card) {
@@ -28,7 +26,6 @@ public class CardServiceImpl implements CardService {
             card = 4309 + "-" + getRandomNumber(1, 10000)+ "-" + getRandomNumber(1, 10000)+ "-" + getRandomNumber(1, 10000);
         }
         return card;
-
     }
 
     @Override
@@ -40,5 +37,4 @@ public class CardServiceImpl implements CardService {
     public Card getCardByNumber(String number) {
         return cardRepository.findByNumber(number);
     }
-
 }

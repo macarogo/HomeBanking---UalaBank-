@@ -15,16 +15,12 @@ import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toList;
 
-
 @Service
 public class LoanServiceImpl implements LoanService {
-
     @Autowired
     ClientLoanRepository clientLoanRepository;
-
     @Autowired
     LoanRepository loanRepository;
-
 
     @Override
     public List<ClientLoanDTO> getAllClientLoans() {
@@ -50,5 +46,4 @@ public class LoanServiceImpl implements LoanService {
     public void saveLoan(Loan loan) {
         loanRepository.save(loan);
     }
-
 }

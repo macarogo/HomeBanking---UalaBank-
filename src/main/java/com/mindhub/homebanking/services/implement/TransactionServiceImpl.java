@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class TransactionServiceImpl implements TransactionService {
-
     @Autowired
     TransactionRepository transactionRepository;
 
@@ -16,5 +15,4 @@ public class TransactionServiceImpl implements TransactionService {
     public void saveTransaction(Transaction transaction){
         transactionRepository.save(transaction);
     }
-
 }

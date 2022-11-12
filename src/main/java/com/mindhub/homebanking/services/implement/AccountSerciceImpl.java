@@ -14,11 +14,8 @@ import static utils.AccountUtils.getRandomNumber;
 
 @Service
 public class AccountSerciceImpl implements AccountService {
-
     @Autowired
     private AccountRepository accountRepository;
-
-
 
     @Override
     public List<AccountDTO> getAccount() {
@@ -60,6 +57,4 @@ public class AccountSerciceImpl implements AccountService {
     public Account findById(Long id) {
         return accountRepository.findById(id).orElse(null);
     }
-
-
 }

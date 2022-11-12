@@ -15,19 +15,14 @@ import java.util.stream.Collectors;
 
 @Service
 public class ClientServiceImpl implements ClientService {
-
    @Autowired
    ClientRepository clientRepository;
-
    @Autowired
     CardRepository cardRepository;
-
    @Autowired
     AccountRepository accountRepository;
-
    @Autowired
     ClientLoanRepository clientLoanRepository;
-
    @Autowired
     TransactionRepository transactionRepository;
 
@@ -61,19 +56,13 @@ public class ClientServiceImpl implements ClientService {
         return clientRepository.findById(id).orElse(null);
     }
 
-
     @Override
     public void deleteClient(long id) {
         Client client = clientRepository.findById(id).orElse(null);
-
         Set<Card> cards = client.getCards();
-
         Set<ClientLoan> clientLoans = client.getClientLoans();
-
         Set<Account> accounts = client.getAccount();
-
         Set<Transaction> transactions = new HashSet<>();
-
         accounts.stream().forEach(account -> {
             transactions.addAll(account.getTransactions());
         });
@@ -84,6 +73,4 @@ public class ClientServiceImpl implements ClientService {
         accounts.forEach(account -> accountRepository.delete(account));
         clientRepository.delete(client);
     }
-
-
 }
