@@ -9,5 +9,4 @@ class HomebankingApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
