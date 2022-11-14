@@ -21,7 +21,6 @@ import static com.mindhub.homebanking.models.Transactiontype.DEBITO;
 
 @SpringBootApplication
 public class HomebankingApplication {
-
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
@@ -39,7 +38,6 @@ public class HomebankingApplication {
 			clientRepository.save(client2);
 			Client client3 = new Client("admin", "admin", "admin@mindhub.com", passwordEncoder.encode("adminmainhub3"));
 			clientRepository.save(client3);
-
 
 			Account cuenta1 = new Account(client1, "VIN-001", LocalDateTime.now(), 5000.,true,AHORRO);
 			Account cuenta2 = new Account(client1,"VIN-002", LocalDateTime.now().plusDays(1), 7500,true, CORRIENTE);
@@ -89,9 +87,6 @@ public class HomebankingApplication {
 			clientLoanRepository.save(loan1);
 			ClientLoan loan2 = new ClientLoan(500000, 12, client1, Personal);
 			clientLoanRepository.save(loan2);
-			//ClientLoan loan3 = new ClientLoan(200000, 36, client1, Automotriz);
-			//clientLoanRepository.save(loan3);
-
 
 			Card card1 = new Card(client1.getFirstName()+" "+client1.getLastName(),CardType.DEBITO,GOLD,"1234-2134-1234-2596", 112, LocalDate.now(), LocalDate.now().plusYears(-5),true, false,client1 );
 			cardRepository.save(card1);
@@ -99,10 +94,6 @@ public class HomebankingApplication {
 			cardRepository.save(card2);
 			Card card3 = new Card(client2.getFirstName()+" "+client2.getLastName(),CardType.CREDITO,SILVER,"0154-1954-1675-9377", 110, LocalDate.now(), LocalDate.now().plusYears(5),true, false,client2 );
 			cardRepository.save(card3);
-
-			//CreditCardLimited limitedGold = new CreditCardLimited(CardColor.GOLD, 100000);
-
 		};
 	}
-
 }
